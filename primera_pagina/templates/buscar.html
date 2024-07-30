@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar</title>
+</head>
+<body>
+    <h1>Buscar Libro</h1>
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit">Buscar</button>
+    </form>
+    <h2>Resultados</h2>
+    <ul>
+    {% for libro in resultados %}
+        <li>{{ libro.titulo }} - {{ libro.autor }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
